@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Montserrat:wght@900&family=Tiro+Tamil&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>CSE391 Assignment 2</title>
+</head>
+<body onload="calc()">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero_converter">Hero Converter</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#magic">Magic!</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+        </ul>
+    </nav>
+
+    <div class="spacing"></div>
+
+    <div class="section_container" id="hero_converter">
+
+        <div class="hero_converter">
+            <div class="sectiontitle">
+                <h1>Hero Converter</h1>
+            </div>
+            <span class="hero_converter_text">Convert: </span><input id="converter_input" type="number">
+            <select name="unit" id="converter_unit">
+                <option value="lbtokg">LB to KG</option>
+                <option value="kgtolb">KG to LB</option>
+            </select>
+            <button onclick="convert()" type="button" id="converter_button">Go</button>
+            <span id="converter_result"></span>
+        </div>
+    </div>
+    <div class="spacing"></div>
+
+
+    <div class="section_container" id="calculator">
+
+        <div class="calculator">
+            <div class="sectiontitle">
+                <h1>Calculator</h1>
+            </div>
+            <table id="calc-table">
+                <tr>
+                    <td><span id="calc-input">Input Series of Number:</span></td>
+                    <td><input id="calc-value" type="text"></td>
+                </tr>
+                <tr>
+                    <td><div>Max: </div></td>
+                    <td><div><span id="max">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Min: </div></td>
+                    <td><div><span id="min">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Sum: </div></td>
+                    <td><div><span id="sum">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Average: </div></td>
+                    <td><div><span id="average">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Reverse Order: </div></td>
+                    <td><div><span id="reverse"></span></div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="spacing"></div>
+
+
+    <div class="section_container" id="magic">
+
+        <div class="magic">
+            <div class="sectiontitle">
+                <h1>Magic!</h1>
+            </div>
+            <textarea id="magic-input" rows="15"></textarea>
+            <div class="magic-button">
+                <button onclick="cleartext()" type="button">Clear It</button>
+                <button onclick="capitalizetext()" type="button" value="NO" id="capitalize-button">Capitalize</button>
+                <button onclick="sortLines()" type="button">Sort</button>
+                <button onclick="reverseLines()" type="button">Reverse</button>
+                <button onclick="stripBlank()" type="button">Strip Blank</button>
+                <button onclick="addLineNo()" type="button">Add Numbers</button>
+                <button onclick="shuffleLines()" type="button">Shuffle</button>
+            </div>
+        </div>
+    </div>
+    <div class="spacing"></div>
+
+
+    <div class="quotes" id="quotes">
+        <div class="sectiontitle">
+            <h1>Quote</h1>
+        </div>
+        <div class="quotesvg"><i class="fa-solid fa-quote-right" id="quote_icon"></i></div>
+        <div id="quote_text"></div>
+        <div id="quote_author"></div>
+    </div>
+    <div class="quotebutton">
+        <button id="change-quote-color-btn" type="button">I am a button</button>
+    </div>
+    <script src="script.js"></script> 
+    <script src="https://kit.fontawesome.com/692c2638c1.js" crossorigin="anonymous"></script>  
+</body>
+</html>
